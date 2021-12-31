@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 export const Timer = () => {
     const [counter, setCounter] = useState(0);
+    
     useEffect(() => {
         const id = setInterval(() => {
             // setCounter(counter - 1);
