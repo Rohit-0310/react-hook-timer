@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
 
 export const Timer = () => {
-    const [counter, setCounter] = useState(20);
+    const [counter, setCounter] = useState(0);
     useEffect(() => {
         const id = setInterval(() => {
             // setCounter(counter - 1);
             setCounter((p) => {
-                if(p === 0) {
+                if(p === 60) {
                     clearInterval(id)
-                    return 0;
+                    return 60;
                 }
-                return p-1;
+                return p+1;
             })
         }, 1000);
         return () => {
